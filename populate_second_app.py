@@ -35,9 +35,13 @@ def populate(n=5):
 
         # created dummy data for Webpage model
         webpg = Webpage.objects.get_or_create(topic= topic_new, url = fake_url, name= fake_name)[0]
+        webpg.save()
 
         # created dummmy data for AccessRecord model
         access_record = AccessRecord.objects.get_or_create(webpage= webpg, date = fake_date)[0]
+        access_record.save()
+        
+
 
 if __name__ == '__main__':
     print("Populating data")
