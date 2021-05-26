@@ -1,10 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
 <html>
-    <head>
-        <title>Second App</title>
-    </head>
-    <body>
-        <header> <strong>This is header</strong> </header>
+<head>
+    <title>Second App</title>
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+</head>
+<body>
+    <header>
+        <strong>This is header</strong>
+    </header>
+    <p>
         <em>{{ insert_me }}</em>
-        <footer> <strong>This is footer</strong></footer>
-    </body>
+    </p>
+    {% load static %}
+    <img src="{% static 'images/framwork-django.png' %}" alt="My image" />
+    <footer>
+        <strong>This is footer</strong>
+    </footer>
+</body>
 </html>
